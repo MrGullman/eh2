@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,700,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  min-height: 100vh;
+}
+
+#app-container {
+  height: 100%;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#app-container.app-stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 50px;
+  width: 100vw;
+  background: #202020;
+  color: #eee;
+  padding: 0 10px;
+  z-index: 10;
+}
+
+.header .logo {
+  width: 40%;
+  position: relative;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.header .logo img {
+  height: auto;
+  width: 100%;
+}
+
+.header #menuBtn {
+  position: relative;
+  width: 40px;
+  height: 15px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background: #3d3d3d;
+  cursor: pointer;
+}
+
+.header .bar {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+}
+
+.header .bar:nth-child(1) {
+  top: 0;
+}
+
+.header .bar:nth-child(2) {
+  bottom: 0;
+}
+
+#asideMenu {
+  position: fixed;
+  margin-top: calc(-100vh + 50px);
+  top: 50px;
+  width: 100vw;
+  min-height: calc(100vh - 50px);
+  background: #eee;
+  height: auto;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+#asideMenu.open {
+  margin-top: 0;
+}
+
+.menucontent-container {
+  padding: 1rem 10px 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 10px;
+}
+
+.menucontent-container .content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.menucontent-container .content h3 {
+  color: #37C5F3;
+  text-align: center;
+  font-weight: normal;
+  padding: 5px 0;
+  background: #3a3a3a;
+}
+
+.menucontent-container .image-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.menucontent-container .image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.main-container {
+  height: auto;
+  margin-top: 50px;
+}
+
+.main-container h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+
+.main-container .h1-punchline {
+  color: #008acc;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 3rem;
+}
+
+.main-container .welcome-img {
+  width: 100%;
+  height: auto;
+}
+
+.main-container h3 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.main-container p {
+  padding: 1rem 1.2rem;
+  font-weight: 300;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.contact-container {
+  background: #eee;
+  padding: 2rem 1.5rem;
+}
+
+.contact-container h2.contact-header {
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.4rem;
+  color: #3a3a3a;
+}
+
+.contact-container form .group {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.contact-container form .group label {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.contact-container form .group input, .contact-container form .group textarea {
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 13px;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+  color: #3a3a3a;
+}
+
+.contact-container form .group input:focus ~ label,
+.contact-container form .group input:valid ~ label, .contact-container form .group textarea:focus ~ label,
+.contact-container form .group textarea:valid ~ label {
+  top: -17px;
+  left: 0;
+  font-size: 0.8rem;
+  color: #37C5F3;
+}
+
+.contact-container form .group textarea {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.contact-container form .group input {
+  margin-bottom: 1.5rem;
+}
+
+.contact-container form .group label {
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  font-weight: 300;
+  color: #555;
+}
+
+.contact-container form input[type="submit"] {
+  margin-top: 1rem;
+  background: #00465d;
+  color: #eee;
+  font-size: 1.3rem;
+  padding: 10px;
+}

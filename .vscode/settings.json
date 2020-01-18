@@ -1,0 +1,12 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      // "format": "compact","compressed","expanded"
+      "format": "expanded",
+      // "extensionName": ".min.css",
+      "extensionName": ".css",
+      // "savePath": "/assets/css/gullmanmvc"
+      "savePath": "/app/assets/css/"
+    }
+  ]
+}
