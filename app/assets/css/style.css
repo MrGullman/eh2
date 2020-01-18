@@ -213,6 +213,7 @@ body {
   display: block;
   width: 100%;
   color: #3a3a3a;
+  border-radius: 0;
 }
 
 .contact-container form .group input:focus ~ label,
